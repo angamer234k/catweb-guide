@@ -1,0 +1,161 @@
+{
+  "favicon": "128490289676597",
+  "title": "Counter Demo",
+  "background": "#0f1112",
+  "webcontent": [
+    {
+      "class": "Frame",
+      "globalid": "rt",
+      "alias": "root",
+      "position": "{0,0},{0,0}",
+      "size": "{1,0},{1,0}",
+      "background_color": "#0f1112",
+      "children": [
+        {
+          "class": "Frame",
+          "globalid": "cd",
+          "alias": "card",
+          "position": "{0.5,0},{0.5,0}",
+          "anchor": "0.5,0.5",
+          "size": "{0,320},{0,220}",
+          "background_color": "#16181a",
+          "children": [
+            {
+              "class": "UICorner",
+              "globalid": "cr",
+              "radius": "0,16"
+            },
+            {
+              "class": "UIStroke",
+              "globalid": "cs",
+              "stroke_color": "#262629",
+              "stroke_thickness": "1"
+            },
+            {
+              "class": "UIPadding",
+              "globalid": "pd",
+              "top": "0,28",
+              "bottom": "0,28",
+              "left": "0,28",
+              "right": "0,28"
+            },
+            {
+              "class": "UIListLayout",
+              "globalid": "ll",
+              "direction": "Vertical",
+              "padding": "0,20",
+              "sort": "LayoutOrder",
+              "alignment_horizontal": "Center"
+            },
+            {
+              "class": "TextLabel",
+              "globalid": "tt",
+              "alias": "title",
+              "order": "1",
+              "position": "{0,0},{0,0}",
+              "size": "{1,0},{0,24}",
+              "text": "Click Counter",
+              "font": "BuilderSansBold",
+              "font_size": "18",
+              "font_color": "#f2f2f3",
+              "align_x": "Center",
+              "align_y": "Center",
+              "background_transparency": "1"
+            },
+            {
+              "class": "TextLabel",
+              "globalid": "lb",
+              "alias": "countlabel",
+              "order": "2",
+              "position": "{0,0},{0,0}",
+              "size": "{1,0},{0,56}",
+              "text": "0",
+              "font": "BuilderSansBold",
+              "font_size": "42",
+              "font_color": "#4e9bff",
+              "align_x": "Center",
+              "align_y": "Center",
+              "background_transparency": "1"
+            },
+            {
+              "class": "TextButton",
+              "globalid": "bt",
+              "alias": "incbtn",
+              "order": "3",
+              "position": "{0,0},{0,0}",
+              "size": "{1,0},{0,44}",
+              "text": "Increment",
+              "font": "BuilderSansMedium",
+              "font_size": "15",
+              "font_color": "#ffffff",
+              "align_x": "Center",
+              "align_y": "Center",
+              "auto_color": "true",
+              "background_color": "#4e9bff",
+              "children": [
+                {
+                  "class": "UICorner",
+                  "globalid": "bc",
+                  "radius": "0,10"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "class": "script",
+          "globalid": "sc",
+          "alias": "logic",
+          "enabled": "true",
+          "content": [
+            {
+              "id": "0",
+              "text": ["When website loaded..."],
+              "globalid": "e0",
+              "x": "4900",
+              "y": "4900",
+              "width": "340",
+              "actions": [
+                {
+                  "id": "11",
+                  "text": ["Set (1)", {"value": "1", "t": "string", "l": "variable"}, "to (0)", {"value": "0", "t": "string", "l": "any"}],
+                  "globalid": "a1"
+                },
+                {
+                  "id": "10",
+                  "text": ["Set (lb)", {"value": "lb", "t": "object"}, "text to ({1})", {"value": "{1}", "t": "string"}],
+                  "globalid": "a2"
+                }
+              ]
+            },
+            {
+              "id": "1",
+              "text": ["When (bt)", {"value": "bt", "t": "object", "l": "button"}, "pressed..."],
+              "globalid": "e1",
+              "x": "4900",
+              "y": "5100",
+              "width": "340",
+              "actions": [
+                {
+                  "id": "12",
+                  "text": ["Increase (1)", {"value": "1", "t": "string", "l": "variable"}, "by (1)", {"value": "1", "t": "number"}],
+                  "globalid": "b1"
+                },
+                {
+                  "id": "10",
+                  "text": ["Set (lb)", {"value": "lb", "t": "object"}, "text to ({1})", {"value": "{1}", "t": "string"}],
+                  "globalid": "b2"
+                },
+                {
+                  "id": "5",
+                  "text": ["Play audio (88442833509532)", {"value": "88442833509532", "t": "string", "assetbrowser": "audio", "l": "id"}, "→ (2)", {"value": "2", "t": "string", "l": "variable?"}],
+                  "globalid": "b3"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

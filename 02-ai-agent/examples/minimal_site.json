@@ -1,0 +1,163 @@
+{
+  "favicon": "128490289676597",
+  "title": "Minimal Site",
+  "background": "#0f1112",
+  "webcontent": [
+    {
+      "class": "Frame",
+      "globalid": "rt",
+      "alias": "root",
+      "position": "{0,0},{0,0}",
+      "size": "{1,0},{1,0}",
+      "background_color": "#0f1112",
+      "children": [
+        {
+          "class": "Frame",
+          "globalid": "hd",
+          "alias": "header",
+          "position": "{0,0},{0,0}",
+          "size": "{1,0},{0,56}",
+          "background_color": "#16181a",
+          "z_index": "10",
+          "children": [
+            {
+              "class": "UIStroke",
+              "globalid": "hs",
+              "stroke_color": "#262629",
+              "stroke_thickness": "1"
+            },
+            {
+              "class": "UIPadding",
+              "globalid": "hp",
+              "left": "0,24",
+              "right": "0,24"
+            },
+            {
+              "class": "TextLabel",
+              "globalid": "tt",
+              "alias": "title",
+              "position": "{0,0},{0,0}",
+              "size": "{1,0},{1,0}",
+              "text": "Minimal",
+              "font": "BuilderSansBold",
+              "font_size": "18",
+              "font_color": "#f2f2f3",
+              "align_x": "Left",
+              "align_y": "Center",
+              "background_transparency": "1"
+            }
+          ]
+        },
+        {
+          "class": "ScrollingFrame",
+          "globalid": "bd",
+          "alias": "body",
+          "position": "{0,0},{0,56}",
+          "size": "{1,0},{1,-56}",
+          "canvassize": "auto_y",
+          "scrollbar_thickness": "6",
+          "scrollbar_color": "#262629",
+          "background_transparency": "1",
+          "children": [
+            {
+              "class": "Frame",
+              "globalid": "ct",
+              "alias": "content",
+              "position": "{0,0},{0,0}",
+              "size": "auto_y",
+              "width": "{1,0}",
+              "background_transparency": "1",
+              "children": [
+                {
+                  "class": "UIListLayout",
+                  "globalid": "ll",
+                  "direction": "Vertical",
+                  "padding": "0,24",
+                  "sort": "LayoutOrder",
+                  "alignment_horizontal": "Center"
+                },
+                {
+                  "class": "UIPadding",
+                  "globalid": "cp",
+                  "top": "0,40",
+                  "bottom": "0,40",
+                  "left": "0,24",
+                  "right": "0,24"
+                },
+                {
+                  "class": "Frame",
+                  "globalid": "cd",
+                  "alias": "card",
+                  "order": "1",
+                  "position": "{0,0},{0,0}",
+                  "size": "auto_y",
+                  "width": "{0,480}",
+                  "background_color": "#16181a",
+                  "children": [
+                    {
+                      "class": "UICorner",
+                      "globalid": "cr",
+                      "radius": "0,12"
+                    },
+                    {
+                      "class": "UIStroke",
+                      "globalid": "cs",
+                      "stroke_color": "#262629",
+                      "stroke_thickness": "1"
+                    },
+                    {
+                      "class": "UIPadding",
+                      "globalid": "pd",
+                      "top": "0,24",
+                      "bottom": "0,24",
+                      "left": "0,24",
+                      "right": "0,24"
+                    },
+                    {
+                      "class": "UIListLayout",
+                      "globalid": "cl",
+                      "direction": "Vertical",
+                      "padding": "0,12",
+                      "sort": "LayoutOrder"
+                    },
+                    {
+                      "class": "TextLabel",
+                      "globalid": "h1",
+                      "alias": "heading",
+                      "order": "1",
+                      "position": "{0,0},{0,0}",
+                      "size": "{1,0},{0,28}",
+                      "text": "Hello CatWeb",
+                      "font": "BuilderSansBold",
+                      "font_size": "22",
+                      "font_color": "#ffffff",
+                      "align_x": "Left",
+                      "align_y": "Center",
+                      "background_transparency": "1"
+                    },
+                    {
+                      "class": "TextLabel",
+                      "globalid": "bd1",
+                      "alias": "bodytext",
+                      "order": "2",
+                      "position": "{0,0},{0,0}",
+                      "size": "{1,0},{0,48}",
+                      "text": "This is a clean minimal starter. Sticky header + scrolling body + one centered card.",
+                      "font": "BuilderSans",
+                      "font_size": "14",
+                      "font_color": "#adadad",
+                      "align_x": "Left",
+                      "align_y": "Top",
+                      "wrap": "true",
+                      "background_transparency": "1"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
