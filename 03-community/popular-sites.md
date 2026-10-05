@@ -1,29 +1,43 @@
-# Notable / Popular Sites (Community)
+# Popular / Notable Sites (Community)
 
-This list is **unofficial** and changes over time.  
-Pulled from Fandom wiki + community mentions. Visits numbers are approximate and outdated quickly.
+**Unofficial list** compiled from the Fandom wiki and community mentions.  
+Visit numbers change constantly and are approximate.
 
-## High-traffic / recognizable
+## Highest-traffic (historical)
 
-| Site | Owner / notes |
+| Site | Notes / owner |
 |------|---------------|
-| **dotab.rbx** | Mayor (@aidenplayszoz) — popular discovery / showcase site |
-| **z4.rbx** | electricdog — domain marketplace (buy/sell domains) |
-| **mira.rbx** | salad — early generative AI site on CatWeb |
-| **wiki.rbx** | Chessboard / kol (@koliemini) — main community encyclopedia |
-| **rfnaf.rbx** | Jexx — FNAF recreation |
-| **catbloxweb.rbx** | nathan — old-Roblox revival (CatBlox) |
-| **games.rbx** | StudioCompile — mini-games (now discontinued) |
+| **z4.rbx** | Domain marketplace (electricdog) — often #1 |
+| **roblox.rbx** | Old-Roblox style homepage |
+| **youtube.rbx** | Video-style site |
+| **games.rbx** | Mini-games (StudioCompile — now discontinued) |
+| **r.rbx** | — |
+| **webflix.rbx** | Streaming parody (jam / Rott3nJam) |
+| **bitset.rbx** | — |
+| **file.rbx** | — |
+| **searchgo.rbx** | Search |
+| **mira.rbx** | Early generative AI site (salad) |
+| **dotab.rbx** | Major discovery / showcase site (Mayor / aidenplayszoz) |
+| **example.rbx** | Official-ish example (HumanCat) |
+| **rfnaf.rbx** | FNAF recreation (Jexx) |
+| **catbloxweb.rbx** | Old-Roblox revival (nathan) |
+| **wiki.rbx** | Main community encyclopedia (kol / Chessboard) |
+| **bloxity.rbx** | DevsLovePizza |
+| **claimaspot.rbx** | Advertising spots (Budgetletsky) |
+| **7he.rbx** | — |
+| **clicker.rbx** | — |
+| **c7ube.rbx** | Large video repository (Web Demon) |
 
-## Other wiki-style / utility
+## Other notable
 
 - **catwwiki.rbx** — community wiki of famous sites
-- Various portfolio, tool, and game recreation sites
+- **catwebscripting.rbx** — (historical, later moderated)
+- Various portfolios, tools, music players, search engines, game recreations
 
 ## System / official-ish
 
-- `catweb.rbx` — main official domain (rules, search, profiles, etc.)
-- Profiles: `catweb.rbx/users/{UserID}` or `catweb.rbx/users/{UserName}`
+- `catweb.rbx` — main official domain (rules, search, profiles…)
+- Profiles: `catweb.rbx/users/{UserID}` or `/{UserName}`
 
-For the latest list of system URLs see `local-pages.md`.  
-For ready-to-import community templates see Mailo’s `catweb-additional-resources` repo.
+For the latest system URLs see `local-pages.md`.  
+For ready-to-import community templates see Mailo’s `catweb-additional-resources`.
