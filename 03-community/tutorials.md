@@ -22,10 +22,6 @@
 - Custom Cursor: https://www.youtube.com/watch?v=nQqasdzPZoc
 - Audio Visualizer: https://www.youtube.com/watch?v=ZQqDw5mMhRY
 
-## External template sites
-
-- https://catwebtemplates.com (community JSON templates)
-
 ## Best path for new builders / AIs
 
 1. Read this repo’s `02-ai-agent/SKILL.md` + examples
