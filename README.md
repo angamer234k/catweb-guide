@@ -6,65 +6,91 @@ CatWeb is the Roblox game where you build real 2D websites with JSON UI + block 
 
 This repo merges:
 - **SiteGPT V11** (by DevsLovePizza) — the most complete AI-oriented guide with exact output contracts, action IDs, parameter shapes, decoder, icons, sounds
-- **Mailo037/catweb-docs** — clean structured reference (CatDocs, UIGPT, JSONScript, Assets)
+- **Mailo037/catweb-docs** — clean structured reference
 - Community wikis (Fandom + Miraheze) — lore, local pages, updates, rules, popular sites
-- Related tools & compilers
+- Working examples + hard failure lists so agents actually succeed
 
-**Targeting CatWeb ~v2.18+** (update VERSION.md when the game updates)
+**Targeting CatWeb ~v2.18+** (see `VERSION.md`)
 
 ---
 
 ## Quick Start for AI Agents
 
-1. Load `02-ai-agent/SKILL.md` as your system prompt / skill.
-2. Follow the **OUTPUT CONTRACT** religiously — every response that generates a site **must** be a single valid JSON object.
-3. Never invent action IDs or property keys. Use only what’s documented.
-4. Prefer fixed `font_size` over `"scaled"` unless the text really needs to flex.
-5. Validate with the tools in `04-tools/` if available.
+1. Load **`02-ai-agent/SKILL.md`** as the system / skill prompt.
+2. Also load (or have available):
+   - `02-ai-agent/output-contract.md`
+   - `02-ai-agent/common-failures.md`
+3. For full tables and edge cases → `01-core/SiteGPT-V11.md`
+4. When generating a site → output **one** valid top-level JSON object only.
+5. Prefer fixed `font_size` over `"scaled"` unless text must flex.
+6. Never invent action IDs, property keys, or asset IDs.
+
+### Ready-to-study examples
+
+- `02-ai-agent/examples/minimal_site.json` — sticky header + scrolling body + centered card
+- `02-ai-agent/examples/interactive_counter.json` — button, numeric variable, Set text, click sound
+
+---
 
 ## Folder Structure
 
 ```
 cw/
-├── README.md                     ← you are here
-├── VERSION.md                    ← current game version we target
+├── README.md
+├── VERSION.md
+├── LICENSE
+├── CONTRIBUTING.md
 │
-├── 01-core/                      # Pure reference material
-│   ├── SiteGPT-V11.md            # Full original SiteGPT (AI contract + everything)
-│   ├── UIGPT.md                  # Element schema & layout rules
-│   ├── JSONScript.md             # Every event + action ID + exact shape
-│   ├── Assets.md                 # Icons, sounds, decoder table
-│   └── Limits.md                 # Free vs Premium, element caps, etc.
+├── 01-core/                      # Pure reference
+│   ├── SiteGPT-V11.md            # Full authoritative guide
+│   ├── UIGPT.md                  # Element schema & layout
+│   ├── JSONScript.md             # Events + actions survival guide
+│   ├── Assets.md                 # 84 icons + 8 sounds + decoder note
+│   └── Limits.md                 # Free vs Premium, caps, gamepasses
 │
 ├── 02-ai-agent/                  # LLM-focused
-│   ├── SKILL.md                  # ★ THE main skill file — drop this into any agent
-│   ├── output-contract.md
-│   ├── common-failures.md
+│   ├── SKILL.md                  # ★ Main skill file
+│   ├── output-contract.md        # Hard output rules
+│   ├── common-failures.md        # What breaks import/publish
 │   └── examples/
+│       ├── minimal_site.json
+│       └── interactive_counter.json
 │
-├── 03-community/                 # Lore & wiki stuff
+├── 03-community/                 # Lore & wiki
 │   ├── local-pages.md            # catweb:// urls
-│   ├── updates.md
 │   ├── rules.md
-│   └── popular-sites.md
+│   ├── popular-sites.md
+│   └── updates.md
 │
-├── 04-tools/                     # Validators, compilers, links
-│   └── related-repos.md
+├── 04-tools/
+│   └── related-repos.md          # Mailo, Catpile, compilers, etc.
 │
-└── 05-templates/                 # Ready-to-import snippets (or link to additional-resources)
+└── 05-templates/                 # Extra ready-to-import snippets
 ```
+
+---
+
+## How to use with common AI tools
+
+| Tool | How |
+|------|-----|
+| **Claude Projects / Custom GPTs** | Upload `SKILL.md` + `output-contract.md` + `common-failures.md` (and SiteGPT if context allows) |
+| **Cursor / Windsurf / etc.** | Point the agent at this repo or drop the skill files into the project |
+| **Direct chat (Grok, ChatGPT, etc.)** | Paste SKILL.md + the two short rule files, then ask for a site |
+| **MCP** | See Mailo’s `catweb-mcp` for searchable access to docs + templates |
+
+---
 
 ## Credits
 
-- **DevsLovePizza** — SiteGPT V11 (the backbone of the AI contract)
-- **Mailo037** — catweb-docs, additional-resources, MCP server, web runner
-- **Fandom / Miraheze wiki contributors**
+- **DevsLovePizza** — SiteGPT V11 (backbone of the AI contract)
+- **Mailo037** — catweb-docs, additional-resources, MCP, web runner
+- **Fandom / Miraheze** wiki contributors
 - CatWeb creator: **HumanCat222** (@CcXxiiHuman_C4t)
 
 ---
 
 ## Contributing
 
-PRs welcome. Keep the AI agent path clean — any change that breaks the output contract or invents undocumented keys gets rejected.
-
-If you’re adding new confirmed action shapes or game changes, put them in `01-core/` and update `VERSION.md`.
+See `CONTRIBUTING.md`.  
+PRs that keep the output contract and action shapes accurate are very welcome.
