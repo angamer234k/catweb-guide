@@ -1,8 +1,8 @@
-# CatWeb Ultimate Knowledge Base (`cw`)
+# CatWeb Ultimate Knowledge Base (`cwukb`)
 
 **a combined knowledge base of what cw is**
 
-CatWeb is the Roblox game where you build real 2D websites with JSON UI + block scripting (`.rbx` TLD, Chrome parody, all inside the game).
+CatWeb (shortened, `cw`) is the Roblox game where you build real 2D websites with JSON UI + block scripting (`.rbx` TLD, Chrome parody, all inside the game).
 
 This repo merges:
 - **SiteGPT V11** (by DevsLovePizza) — the most complete AI-oriented guide with exact output contracts, action IDs, parameter shapes, decoder, icons, sounds
