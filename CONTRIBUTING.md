@@ -1,4 +1,4 @@
-# Contributing to `cw`
+# Contributing to `cwukb`
 
 Thanks for helping keep the ultimate CatWeb knowledge base accurate.
 
