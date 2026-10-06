@@ -1,6 +1,6 @@
 # CatWeb Ultimate Knowledge Base (`cw`)
 
-**The single source of truth for CatWeb (Roblox) — built for humans *and* AI agents.**
+**a combined knowledge base of what cw is**
 
 CatWeb is the Roblox game where you build real 2D websites with JSON UI + block scripting (`.rbx` TLD, Chrome parody, all inside the game).
 
