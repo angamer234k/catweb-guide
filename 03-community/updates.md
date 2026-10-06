@@ -3,6 +3,33 @@
 High-level changelog notes useful for AIs and humans.  
 Full changelogs live on the Fandom wiki and in-game (`catweb://whats-new`).
 
+## Upcoming: Unlimited Update (Oct 11, 2026)
+
+**Official event:** https://www.roblox.com/events/2082717428307067527  
+Sneak peeks from HumanCat222 (@sneak peeks channel)
+
+### Confirmed changes
+
+| Feature | Details |
+|---------|---------|
+| **Object Limit → Cost Limit** | Hard object limit (100 free / 400 Premium) is **removed**. Replaced by a single **cost** limit calculated from: elements + styling elements + events + actions in scripts. Designed to be high enough for normal use. |
+| **Event limit** | 30 → **90** |
+| **Action limit (per event)** | 120 → **360** |
+| **Premium early access** | Premium users get the new Cost Limit system at launch. Free users roll out over the following week. All other Premium perks (pages, domains, themes, etc.) stay. |
+| **Publishing behavior** | Reaching the Cost Limit still lets you edit & collaborate, but **blocks publishing**. Editor only hard-stops if you go *significantly* over. |
+| **Attributes** | New custom **Attributes** on elements (key-value pairs, visible in properties panel). |
+| **Individual corner radii** | `UICorner` can now set TopLeft / TopRight / BottomLeft / BottomRight independently. |
+| **Shadows** | New **Shadow** styling element (BlurRadius, Color, Offset, Spread, Transparency, Layer). |
+
+### What this means for AI agents
+
+- Old hard caps of 100/400 elements no longer apply after the update.
+- Prefer generating richer sites when the Cost Limit is live.
+- New property keys / element classes (Attributes, per-corner radii, Shadow) must be confirmed in the live editor before using them in generated JSON — do **not** invent shapes until SiteGPT / JSONScript is updated.
+- Keep watching `catweb://whats-new` on release day.
+
+---
+
 ## Early history
 
 - **Public release:** March 2024 (Anniversary: March 24)
