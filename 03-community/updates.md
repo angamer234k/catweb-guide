@@ -1,20 +1,33 @@
-# Updates / Changelog Notes
+# CatWeb Update History (Summary)
 
-CatWeb updates frequently. Full detailed changelogs live in-game at `catweb://whats-new` and on the Fandom wiki “Updates” page.
+High-level changelog notes useful for AIs and humans.  
+Full changelogs live on the Fandom wiki and in-game (`catweb://whats-new`).
 
-## Notable historical points (for context)
+## Early history
 
-- Public release: March 2024 (Anniversary March 24)
-- Script editor major change: February 2025
-- Variable scopes, function parameters, `else`, image setters, dark-theme check, concatenate/join, server timestamp, etc. added around v2.12 (June 2025)
-- Action / event limits raised over time (currently 30 events, 120 actions/event, 3600 total)
-- Cookies gamepass, Premium benefits, custom fonts, high-contrast, QR/deep-link sharing all landed in later 2025 builds
+- **Public release:** March 2024 (Anniversary: March 24)
+- **Dev start:** ~April 2024
+- First updates (v1.0.x / v1.1) added donation buttons, basic editor improvements, middle-click new tab, etc.
 
-## How to stay current
+## Notable 2.x milestones
 
-1. Check `catweb://whats-new` in-game
-2. Watch the official Discord / Communications server
-3. Update `VERSION.md` in this repo when a meaningful scripting or element change lands
-4. Cross-check new action IDs against the authoritative table in SiteGPT V11 / JSONScript before adding them here
+| Version | Approx date | Highlights |
+|---------|-------------|------------|
+| **v2.9.x** | early 2025 | Script editor improvements, output panel, keyboard shortcuts |
+| **v2.10.0** | Mar 25, 2025 | **Anniversary Update** — Milestone badges, Tooltip, Rich/Wrap/Truncate text, Gradient + Padding styling, better mobile resize, search spellcheck |
+| **v2.12–2.13** | mid 2025 | Various quality & block improvements |
+| **v2.14** | ~Nov 2025 | **Hallway** event, direct table entry access (`{table.entry}`), multi-element property editing, Easy Styling category, F5 / Ctrl+F5 test, Ctrl+A select all |
+| **v2.15** | ~Dec 2025 | **Collaboration (Beta)** (up to 10 people), copy/cut/paste elements across sites, major mobile editor UX, higher variable data limit (~5 MB), higher broadcast rate |
 
-When in doubt, the block palette export inside the game is the ultimate source of truth for action shapes.
+## Other notes
+
+- Old script editor was replaced (Feb 2025 era).
+- Cookie system received dedicated improvements.
+- Broadcast size / rate limits have been raised over time (see `01-core/Limits.md`).
+- **2026 Downage:** short (~2 day) period where the game was under Roblox review.
+
+When the game updates, prefer checking:
+
+1. `catweb://whats-new`
+2. In-game block palette
+3. Then update this file + `VERSION.md`

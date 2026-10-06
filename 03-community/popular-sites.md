@@ -1,44 +1,47 @@
-# Popular / Notable Sites (Community)
+# Popular / Notable Sites
 
-**Unofficial list** compiled from the Fandom wiki and community mentions.  
-Visit numbers change constantly and are approximate.
+Unofficial list compiled from the Fandom wiki dump + earlier community data.  
+Visit numbers are approximate and change constantly.
 
-## Highest-traffic (historical)
+## High-traffic / notable
 
-| Site | Notes / owner |
-|------|---------------|
-| **z4.rbx** | Domain marketplace (electricdog) — often #1 |
-| **roblox.rbx** | Old-Roblox style homepage |
-| **youtube.rbx** | Video-style site |
-| **games.rbx** | Mini-games (StudioCompile — now discontinued) |
-| **r.rbx** | Pixelated/low quality rickroll |
-| **webflix.rbx** | Streaming parody (jam / Rott3nJam) |
-| **bitset.rbx** | — |
-| **file.rbx** | JSONs and upload codes designed to make website creation faster. Pay walled, but has text encoder free. File has other scripts like MIDI, Image, Stenography, and others. |
-| **searchgo.rbx** | The *best* search engine in CatWeb, aside from catweb.rbx |
-| **mira.rbx** | Early generative AI site (salad) |
-| **dotab.rbx** | Major discovery / showcase site (Mayor / aidenplayszoz) |
-| **example.rbx** | Official-ish example (HumanCat) |
-| **rfnaf.rbx** | FNAF recreation (Jexx) |
-| **catbloxweb.rbx** | Old-Roblox revival (nathan) |
-| **wiki.rbx** | Main community encyclopedia (kol / Chessboard) |
-| **bloxity.rbx** | DevsLovePizza |
-| **claimaspot.rbx** | Advertising spots (Budgetletsky) |
-| **7he.rbx** | — |
-| **clicker.rbx** | — |
-| **c7ube.rbx** | Large video repository (Web Demon) |
+| Site | Approx. visits | Owner / notes |
+|------|----------------|---------------|
+| **z4.rbx** | very high | electricdog — domain marketplace, often #1 |
+| **file.rbx** | 60k+ | StudioCompile — API / file tools |
+| **listen.rbx** | 36k+ | Lamb — music library |
+| **service.rbx** | 20k+ | StudioCompile — JSON sharing |
+| **claimaspot.rbx** | 17k+ | Budgetletsky — advertising spots |
+| **7he.rbx** | 15k+ | 7he_WR — links & utilities |
+| **adverse.rbx** | 14k+ | LittleFox — sponsors |
+| **preset.rbx** | 13k+ | LittleFox — multi-purpose |
+| **verto.rbx** | 12k+ | 0_080463 — tools |
+| **mira.rbx** | 10k+ | salad — generative AI chatbot |
+| **webflix.rbx** | high | jam / Rott3nJam — streaming parody |
+| **dotab.rbx** | high | Mayor — major discovery / showcase |
+| **roblox.rbx** | high | old-Roblox style homepage |
+| **youtube.rbx** | high | video-style |
+| **games.rbx** | high (discontinued) | StudioCompile — mini-games |
+| **catbloxweb.rbx** | 8k+ | nathan — old-Roblox revival |
+| **wiki.rbx** | high | kol — main community encyclopedia |
+| **bloxity.rbx** | high | DevsLovePizza |
+| **example.rbx** | — | HumanCat (official-ish example) |
+| **c7ube.rbx** | — | Web Demon — large video repo |
+| **searchgo.rbx** | — | search |
+| **walgreens.rbx** | 10k+ | idleoofy |
+| **rfnaf.rbx** | — | Jexx — FNAF recreation |
 
-## Other notable
+## Other useful / interesting
 
 - **catwwiki.rbx** — community wiki of famous sites
-- **catwebscripting.rbx** — (historical, later moderated)
-- **eof.rbx** - search engine with 100+ sites indexed
-- Various portfolios, tools, music players, search engines, game recreations
+- **4v.rbx** — search engine
+- **bitcloud.rbx** — cloud-style service
+- **ropc.rbx** — online virtual machine (kol)
+- Various portfolios, tools, music players, game recreations, old-Roblox revivals
 
 ## System / official-ish
 
-- `catweb.rbx` — main official domain (rules, search, profiles…); has every site indexed. (UNCERTAIN: Unsure where catweb.rbx pulls its data from to see all the sites registered and how it searches through them instantly.)
+- `catweb.rbx` — main official domain (rules, search, profiles…)
 - Profiles: `catweb.rbx/users/{UserID}` or `/{UserName}`
 
-For the latest system URLs see `local-pages.md`.  
-For ready-to-import community templates see Mailo’s `catweb-additional-resources`.
+See also `local-pages.md` for `catweb://` system URLs.
