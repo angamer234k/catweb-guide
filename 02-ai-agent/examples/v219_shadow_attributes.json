@@ -1,0 +1,132 @@
+{
+  "favicon": "128490289676597",
+  "title": "v2.19 Demo — Shadow + Attributes",
+  "background": "#0f1112",
+  "webcontent": [
+    {
+      "class": "Frame",
+      "globalid": "rt",
+      "alias": "root",
+      "position": "{0,0},{0,0}",
+      "size": "{1,0},{1,0}",
+      "background_color": "#0f1112",
+      "children": [
+        {
+          "class": "Frame",
+          "globalid": "cd",
+          "alias": "card",
+          "position": "{0.5,0},{0.5,0}",
+          "anchor": "0.5,0.5",
+          "size": "{0,320},{0,180}",
+          "background_color": "#16181a",
+          "attributes": [
+            {
+              "name": { "value": "theme" },
+              "value": { "value": "dark" }
+            },
+            {
+              "name": { "value": "version" },
+              "value": { "value": "2.19" }
+            }
+          ],
+          "children": [
+            {
+              "class": "UICorner",
+              "globalid": "cr",
+              "radius": "0,16",
+              "radius_top_left": "0,24",
+              "radius_top_right": "0,8",
+              "radius_bottom_left": "0,8",
+              "radius_bottom_right": "0,24"
+            },
+            {
+              "class": "UIShadow",
+              "globalid": "sh",
+              "blur_radius": "0,12",
+              "shadow_color": "#4e9bff",
+              "shadow_transparency": "0.55",
+              "shadow_offset": "{0,0},{0,6}",
+              "shadow_spread": "{0,0},{0,0}",
+              "z_index": "0"
+            },
+            {
+              "class": "UIPadding",
+              "globalid": "pd",
+              "top": "0,24",
+              "bottom": "0,24",
+              "left": "0,24",
+              "right": "0,24"
+            },
+            {
+              "class": "UIListLayout",
+              "globalid": "ll",
+              "direction": "Vertical",
+              "padding": "0,12",
+              "sort": "LayoutOrder",
+              "alignment_horizontal": "Center"
+            },
+            {
+              "class": "TextLabel",
+              "globalid": "tt",
+              "alias": "title",
+              "order": "1",
+              "position": "{0,0},{0,0}",
+              "size": "{1,0},{0,28}",
+              "text": "Unlimited Update",
+              "font": "BuilderSansBold",
+              "font_size": "20",
+              "font_color": "#f2f2f3",
+              "align_x": "Center",
+              "align_y": "Center",
+              "background_transparency": "1"
+            },
+            {
+              "class": "TextLabel",
+              "globalid": "bd",
+              "alias": "body",
+              "order": "2",
+              "position": "{0,0},{0,0}",
+              "size": "{1,0},{0,40}",
+              "text": "Shadow + per-corner radii + attributes",
+              "font": "BuilderSans",
+              "font_size": "14",
+              "font_color": "#adadad",
+              "align_x": "Center",
+              "align_y": "Top",
+              "wrap": "true",
+              "background_transparency": "1"
+            }
+          ]
+        },
+        {
+          "class": "script",
+          "globalid": "sc",
+          "alias": "logic",
+          "enabled": "true",
+          "content": [
+            {
+              "id": "0",
+              "text": ["When website loaded..."],
+              "globalid": "e0",
+              "x": "4900",
+              "y": "4900",
+              "width": "360",
+              "actions": [
+                {
+                  "id": "139",
+                  "text": ["Get", {"t": "string", "l": "attribute", "value": "theme"}, "of", {"t": "object", "value": "cd"}, "→", {"t": "string", "l": "variable", "value": "1"}],
+                  "globalid": "a1"
+                },
+                {
+                  "id": "10",
+                  "text": ["Set (bd)", {"value": "bd", "t": "object"}, "text to (Theme: {1})", {"value": "Theme: {1}", "t": "string"}],
+                  "globalid": "a2"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

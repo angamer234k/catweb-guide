@@ -1,7 +1,7 @@
 # UIGPT — Element Schema & Layout (Quick Reference)
 
-**Primary authority:** SiteGPT V11 (full detailed schemas, examples, and edge cases).  
-This file is a condensed merged view for fast lookup.
+**Targeting CatWeb v2.19.0.0 (Unlimited Update)**  
+**Primary authority:** SiteGPT V11 + live v2.19 shapes.
 
 ## Top-level site object
 
@@ -37,6 +37,21 @@ All scalar values are **quoted strings**.
 | `tooltip` | string |
 | `children` | array |
 | `order` | integer string (for LayoutOrder) |
+| `attributes` | array of attribute objects (max 8) — **v2.19+** |
+
+## Attributes (v2.19+)
+
+```json
+"attributes": [
+  {
+    "name":  { "value": "Attribute 1" },
+    "value": { "value": "some value" }
+  }
+]
+```
+
+- Max **8** attributes per element
+- Scriptable via actions 138 / 139 / 140
 
 ## Visual classes
 
@@ -44,11 +59,11 @@ All scalar values are **quoted strings**.
 - `TextLabel` — static text
 - `TextButton` — clickable (+ `auto_color`)
 - `TextButton?link` — navigates (`href`, `new_tab`)
-- `TextButton?transfer` — Roblox purchase prompt (`product`, `product_type`, `thanks_href`)
+- `TextButton?transfer` — Roblox purchase prompt
 - `TextButton?avataritem` — avatar item purchase
 - `ImageLabel` / `ImageButton` / `ImageButton?link`
-- `TextBox` — input (`placeholder`, `editable`, `multiline`)
-- `ScrollingFrame` — (`canvassize`: `"auto_y"` / `"auto_x"` / `"auto_xy"`, never bare `"auto"`)
+- `TextBox` — input
+- `ScrollingFrame` — (`canvassize`: `"auto_y"` / `"auto_x"` / `"auto_xy"`)
 
 ## Non-visual
 
@@ -57,7 +72,47 @@ All scalar values are **quoted strings**.
 
 ## Styling modifiers (children of visual elements only)
 
-`UICorner` · `UIStroke` · `UIPadding` · `UIListLayout` · `UIGridLayout` · `UIGradient` · `UIAspectRatioConstraint` · `UISizeConstraint` · `UIFlexItem`
+| Class | Key properties |
+|-------|----------------|
+| `UICorner` | `radius`, **`radius_top_left`**, **`radius_top_right`**, **`radius_bottom_left`**, **`radius_bottom_right`** (v2.19+) |
+| `UIShadow` | **NEW v2.19** — see below |
+| `UIStroke` | `stroke_color`, `stroke_thickness`, `stroke_transparency` |
+| `UIPadding` | `top`, `bottom`, `left`, `right` |
+| `UIListLayout` | `direction`, `padding`, `sort`, `alignment_*` |
+| `UIGridLayout` | `size` (cell), `padding`, etc. |
+| `UIGradient` | color stops **without** `#` |
+| `UIAspectRatioConstraint` | |
+| `UISizeConstraint` | |
+| `UIFlexItem` | |
+
+### UIShadow (v2.19+)
+
+```json
+{
+  "class": "UIShadow",
+  "globalid": "sF",
+  "blur_radius": "1, 0",
+  "shadow_color": "#ff0000",
+  "shadow_transparency": "0.59",
+  "shadow_offset": "{0, 3},{0, 3}",
+  "shadow_spread": "{0, -5},{0, -5}",
+  "z_index": "1"
+}
+```
+
+### UICorner per-corner (v2.19+)
+
+```json
+{
+  "class": "UICorner",
+  "globalid": "'S",
+  "radius": "0.1, 0",
+  "radius_top_left": "1, 0",
+  "radius_top_right": "0, 0",
+  "radius_bottom_left": "1, 0",
+  "radius_bottom_right": "0, 0"
+}
+```
 
 **Critical key names:**
 - Layout order → `"order"` (never `layout_order`)
@@ -67,18 +122,15 @@ All scalar values are **quoted strings**.
 ## Layout patterns that actually work
 
 1. **Sticky header + scrolling body**  
-   Root `Frame {1,0},{1,0}`  
-   → Navbar sibling `Frame {1,0},{0,56}` (z_index 10)  
-   → Body `ScrollingFrame {1,0},{1,-56}` pos `{0,0},{0,56}` canvassize `"auto_y"`
+   Root `Frame {1,0},{1,0}` → Navbar sibling + Body `ScrollingFrame`
 
 2. **Vertical stack**  
-   Parent with `UIListLayout` direction Vertical + `sort:"LayoutOrder"`  
-   Children all at `{0,0},{0,0}` with integer `"order"`
+   Parent with `UIListLayout` direction Vertical + `sort:"LayoutOrder"`
 
 3. **Center a fixed-width card**  
    `position` x = `"{0.5,0}"` + `anchor` = `"0.5,0"`
 
 4. **Padding**  
-   Always a `UIPadding` child. Never fake it with position + smaller size.
+   Always a `UIPadding` child.
 
-Full examples, font list, responsive patterns, and every property table → **SiteGPT V11**.
+Full examples → **SiteGPT V11** + `02-ai-agent/examples/`.
