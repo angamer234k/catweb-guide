@@ -1,7 +1,10 @@
 # Target Version
 
-**CatWeb game version targeted by this knowledge base:** ~v2.18.2.3 (as of Mailo docs) / latest SiteGPT V11 alignment.
+**CatWeb v2.19.0.0** — Unlimited Update (released October 11, 2026)
 
-Update this file whenever the game receives a meaningful scripting or element change.
-
-Last reviewed: 2026-10-05
+Key changes this guide tracks:
+- Cost Limit replaces Object Limit
+- 90 events / 360 actions per event
+- UIShadow, per-corner UICorner, Attributes
+- Mouse cursor actions (135–137)
+- Attribute actions (138–140)

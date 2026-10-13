@@ -1,60 +1,56 @@
 # CatWeb Update History (Summary)
 
-High-level changelog notes useful for AIs and humans.  
-Full changelogs live on the Fandom wiki and in-game (`catweb://whats-new`).
+## v2.19.0.0 — Unlimited Update (Oct 11, 2026)
 
-## Upcoming: Unlimited Update (Oct 11, 2026)
+**Official event:** https://www.roblox.com/events/2082717428307067527
 
-**Official event:** https://www.roblox.com/events/2082717428307067527  
-Sneak peeks from HumanCat222 (@sneak peeks channel)
-
-### Confirmed changes
+### 🟢 Added
 
 | Feature | Details |
 |---------|---------|
-| **Object Limit → Cost Limit** | Hard object limit (100 free / 400 Premium) is **removed**. Replaced by a single **cost** limit calculated from: elements + styling elements + events + actions in scripts. Designed to be high enough for normal use. |
-| **Event limit** | 30 → **90** |
-| **Action limit (per event)** | 120 → **360** |
-| **Premium early access** | Premium users get the new Cost Limit system at launch. Free users roll out over the following week. All other Premium perks (pages, domains, themes, etc.) stay. |
-| **Publishing behavior** | Reaching the Cost Limit still lets you edit & collaborate, but **blocks publishing**. Editor only hard-stops if you go *significantly* over. |
-| **Attributes** | New custom **Attributes** on elements (key-value pairs, visible in properties panel). |
-| **Individual corner radii** | `UICorner` can now set TopLeft / TopRight / BottomLeft / BottomRight independently. |
-| **Shadows** | New **Shadow** styling element (BlurRadius, Color, Offset, Spread, Transparency, Layer). |
+| **Shadow** styling element | `UIShadow` — BlurRadius, Color, Offset, Spread, Transparency, z_index |
+| **Per-corner radii** | `UICorner` now has `radius_top_left`, `radius_top_right`, `radius_bottom_left`, `radius_bottom_right` |
+| **Attributes** | Custom key-value pairs on elements (max 8). Scriptable via Get/Set/Get-all |
+| **Mouse cursor control** | Set mouse icon, Hide mouse cursor, Show mouse cursor |
+| **Middle / Top / Bottom Image** | New image properties |
+| **Analytics** | Session time, popular pages, reach, demographics, etc. |
 
-### What this means for AI agents
+### New actions (authoritative IDs)
 
-- Old hard caps of 100/400 elements no longer apply after the update.
-- Prefer generating richer sites when the Cost Limit is live.
-- New property keys / element classes (Attributes, per-corner radii, Shadow) must be confirmed in the live editor before using them in generated JSON — do **not** invent shapes until SiteGPT / JSONScript is updated.
-- Keep watching `catweb://whats-new` on release day.
+| ID | Action |
+|----|--------|
+| `138` | Set \<attribute\> of \<object\> to \<any?\> |
+| `139` | Get \<attribute\> of \<object\> → \<variable\> |
+| `140` | Get all attributes of \<object\> → \<table\> |
+| `135` | Set mouse icon to \<id?\> |
+| `136` | Hide mouse cursor |
+| `137` | Show mouse cursor |
+
+### 🟡 Changed
+
+- **Object Limit removed** → replaced by **Cost Limit** (elements + styling + events + actions)
+- Script limits: **30 → 90 events**, **120 → 360 actions/event**
+- ScrollableFrame Color / Transparency / Thickness now scriptable
+- CatWeb TV UI updated
+
+### 🔵 Fixed
+
+- "Is left mouse button down" now correctly detects mobile / console presses
+
+### Rollout
+
+- Cost Limit available immediately for **Premium**
+- Free users over the following weeks
 
 ---
 
-## Early history
+## Earlier milestones
 
-- **Public release:** March 2024 (Anniversary: March 24)
-- **Dev start:** ~April 2024
-- First updates (v1.0.x / v1.1) added donation buttons, basic editor improvements, middle-click new tab, etc.
+| Version | Date | Highlights |
+|---------|------|------------|
+| v2.15 | ~Dec 2025 | Collaboration (Beta), copy/paste, mobile UX, higher var data |
+| v2.14 | ~Nov 2025 | Hallway event, multi-element edit, Easy Styling |
+| v2.10.0 | Mar 2025 | Anniversary — milestone badges, Gradient, Padding, Tooltip |
+| Public | Mar 2024 | Launch |
 
-## Notable 2.x milestones
-
-| Version | Approx date | Highlights |
-|---------|-------------|------------|
-| **v2.9.x** | early 2025 | Script editor improvements, output panel, keyboard shortcuts |
-| **v2.10.0** | Mar 25, 2025 | **Anniversary Update** — Milestone badges, Tooltip, Rich/Wrap/Truncate text, Gradient + Padding styling, better mobile resize, search spellcheck |
-| **v2.12–2.13** | mid 2025 | Various quality & block improvements |
-| **v2.14** | ~Nov 2025 | **Hallway** event, direct table entry access (`{table.entry}`), multi-element property editing, Easy Styling category, F5 / Ctrl+F5 test, Ctrl+A select all |
-| **v2.15** | ~Dec 2025 | **Collaboration (Beta)** (up to 10 people), copy/cut/paste elements across sites, major mobile editor UX, higher variable data limit (~5 MB), higher broadcast rate |
-
-## Other notes
-
-- Old script editor was replaced (Feb 2025 era).
-- Cookie system received dedicated improvements.
-- Broadcast size / rate limits have been raised over time (see `01-core/Limits.md`).
-- **2026 Downage:** short (~2 day) period where the game was under Roblox review.
-
-When the game updates, prefer checking:
-
-1. `catweb://whats-new`
-2. In-game block palette
-3. Then update this file + `VERSION.md`
+When the game updates again, check `catweb://whats-new` first, then update this file + `VERSION.md`.
