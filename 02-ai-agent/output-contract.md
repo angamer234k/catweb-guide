@@ -38,7 +38,7 @@ Optional: `thumbnail_id`, `thumbnail`.
 - Forbidden keys that cause instant `[INVALIDATED]`:
   - `layout_order` → use `"order"`
   - `cell_size` → use `"size"` on UIGridLayout
-  - any invented key (`padding`, `margin`, `gap`, `border-radius`, etc.)
+  - any invented key (`padding`, `margin`, `gap`, `border-radius`, etc. as element keys)
 
 ## 6. Scripts
 
@@ -61,3 +61,9 @@ If the request would require inventing undocumented actions, properties, or asse
 
 **Full details + examples:** `01-core/SiteGPT-V11.md`  
 **Quick skill file:** `02-ai-agent/SKILL.md`
+
+## 9. Validate / repair
+
+**If the user asks to validate, repair, or fix their JSON, use the appropriate tools in `04-tools/`. Never try to edit, modify, or fix JSONs without the validator/repair tools.**
+
+`repair.py` / `repair.js` only change the file when the schema is actually broken; otherwise they report `NO_REPAIR_NEEDED`.

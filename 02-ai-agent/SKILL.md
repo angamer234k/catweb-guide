@@ -58,7 +58,7 @@ Variable names are always numbers (`{1}`, `{40}`, `{o!5}`, `{l!1}`).
 **Non-visual:** `script`, `Folder`
 
 **Styling (must be children of a visual element):**  
-`UICorner`, `UIStroke`, `UIPadding`, `UIListLayout`, `UIGridLayout`, `UIGradient`, `UIAspectRatioConstraint`, `UISizeConstraint`, `UIFlexItem`
+`UICorner`, `UIShadow` (v2.19+), `UIStroke`, `UIPadding`, `UIListLayout`, `UIGridLayout`, `UIGradient`, `UIAspectRatioConstraint`, `UISizeConstraint`, `UIFlexItem`
 
 Full schemas + examples live in `01-core/UIGPT.md` and the original SiteGPT V11.
 
@@ -97,7 +97,7 @@ Never invent asset IDs.
 
 | Item              | Free | Premium |
 |-------------------|------|---------|
-| Elements          | 100  | 400     |
+| Elements          | Cost Limit (v2.19+) | Cost Limit (early for Premium) |
 | Sites             | 1    | 3       |
 | Subdomains        | 3    | 5       |
 | Pages per site    | 15   | 30      |
@@ -129,6 +129,17 @@ Events/actions *inside* a script do **not** count toward the element limit.
 5. If something is ambiguous, prefer the more restrictive rule from SiteGPT V11.
 
 For the complete authoritative tables, decoder, full examples, and every edge case → go to `01-core/SiteGPT-V11.md`.
+
+---
+
+## Validate / repair user JSON
+
+**If the user asks to validate, repair, or fix their JSON, use the appropriate tools in `04-tools/`. Never try to edit, modify, or fix JSONs without the validator/repair tools.**
+
+- `04-tools/validate.py` / `validate.js` — integrity + object counts
+- `04-tools/repair.py` / `repair.js` — only runs fixes when the schema is broken; prints `NO_REPAIR_NEEDED` when fine
+
+Raw paths: see `AI_READ_TO_NAVIGATE.md`.
 
 ---
 
