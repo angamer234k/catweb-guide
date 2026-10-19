@@ -69,7 +69,7 @@ Full schemas + examples live in `01-core/UIGPT.md` and the original SiteGPT V11.
 - Top-level `content` entries = only events (ids 0–3, 5–16) or `Define function` (id 6).
 - Variable names = numbers only.
 - Function parameters: prefer passing via globals (set before `Run function`). Bare number `variable_overrides` break publishing.
-- Every string parameter in a `text` array gets the `()` annotation convention for readability in the editor.
+- **Do NOT** bake values into literal segments with `()` labels (e.g. `"Set (1)"`, `"text to ({1})"`). That pattern breaks publishing. Use bare connectives only (`"Set"`, `"to"`, `"text to"`). Document slot meaning in comments in the guide — never inside emitted JSON.
 - Decoder exists **only** for very long strings that risk filtering. Do not encode normal copy.
 
 Full authoritative block table (16 events + 122 actions) is in `01-core/JSONScript.md` / SiteGPT V11 §5.5.
@@ -117,6 +117,7 @@ Events/actions *inside* a script do **not** count toward the element limit.
 - Fixed-width block left-aligned instead of centered
 - Padding faked with position instead of UIPadding
 - Decoder used on short strings (pointless + error-prone)
+- `()` value labels before input slots (`"Set (1)"`) → publish breaks
 
 ---
 
