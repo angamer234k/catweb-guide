@@ -12,6 +12,7 @@
 5. Variable names = numbers only (`{1}`, `{o!5}`, `{l!2}`).
 6. Function params: prefer globals set before the call.
 7. `t`/`l` are fixed per slot — copy from the authoritative table, never guess.
+8. **No `()` value labels in `text` literals.** Emit bare connectives (`"Set"`, `"to"`, `"text to"`). Putting the value in parentheses before a parameter slot (the old “annotation convention”) **breaks publishing**. Explain slots with comments in docs only — never inside JSON.
 
 ## Events (top-level content only)
 
@@ -70,7 +71,7 @@
 Exact `text` arrays from live dump:
 
 ```json
-// 139 Get attribute
+// 139 Get attribute — comments only in docs, not in site JSON
 {"id":"139","text":["Get",{"t":"string","l":"attribute"},"of",{"t":"object"},"→",{"t":"string","l":"variable"}]}
 
 // 138 Set attribute
@@ -92,7 +93,7 @@ Exact `text` arrays from live dump:
 ## Two different “any” shapes
 
 | Shape | Used by |
-|-------|---------|
+|-------|--------|
 | Bare `{"t":"any"}` | Log, Warn, Set prop, Tween “to”, Set cookie |
 | `{"t":"string","l":"any"}` | Set variable, comparisons, table ops |
 | `{"t":"any","l":"any?"}` | Set attribute value (v2.19) |

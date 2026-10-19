@@ -38,7 +38,7 @@ Optional: `thumbnail_id`, `thumbnail`.
 - Forbidden keys that cause instant `[INVALIDATED]`:
   - `layout_order` → use `"order"`
   - `cell_size` → use `"size"` on UIGridLayout
-  - any invented key (`padding`, `margin`, `gap`, `border-radius`, etc. as element keys)
+  - any invented key (`padding`, `margin`, `gap`, `border-radius`, etc.)
 
 ## 6. Scripts
 
@@ -47,6 +47,7 @@ Optional: `thumbnail_id`, `thumbnail`.
 - Action/event `id`s must come from the authoritative table only.
 - Control flow (`If`, `Repeat`, `Iterate`) is **flat** — no nested `"actions"` key. Body = siblings + matching `"end"` (id `25`).
 - Variable names are **numbers only** (`{1}`, `{o!5}`, `{l!2}`).
+- **No `()` value labels** in action `text` literals. Use bare connectives (`"Set"`, `"to"`). Labels before input slots break publish.
 
 ## 7. Text & assets
 
