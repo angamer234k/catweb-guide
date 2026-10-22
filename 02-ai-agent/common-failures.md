@@ -21,6 +21,13 @@ Mistakes that look fine locally but break import, publish, or runtime.
 | Confusing the two “any” shapes | Bare `{"t":"any"}` vs `{"t":"string","l":"any"}` — they are not interchangeable |
 | Swapped comparison ids | `20` = greater than, `21` = lower than |
 | `()` labels in `text` literals (`"Set (1)"`, `"to (0)"`) | Bare connectives only: `"Set"`, `"to"` — **never** put the value in parentheses before the input slot |
+| Accidental parentheses before a parameter the action shape does **not** expect | **Publish fails silently.** Always match the exact `text` array shape. No annotation parentheses ever. |
+
+**Hard rule on parentheses:**  
+If the official shape is  
+`["Set", {"t":"string","l":"variable"}, "to", {"t":"string","l":"any"}]`  
+then the JSON **must** look exactly like that.  
+Putting `"Set (1)"` or `"to (hello)"` (or any parentheses around the value) makes publish fail with **zero error message**.
 
 ## Visual / layout defects (valid JSON, looks broken)
 
